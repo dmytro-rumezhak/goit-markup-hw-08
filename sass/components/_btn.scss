@@ -1,0 +1,31 @@
+.btn {
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $bodyTitleColor;
+  background-color: $backgroundSelectColor;
+  cursor: pointer;
+
+  transition: background-color 250ms $timingFunction, color 250ms $timingFunction,
+    box-shadow 250ms $timingFunction;
+}
+
+.btn__hero {
+  padding: 10px 32px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $buttonHoverTextColor;
+  background-color: $accentColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
+}

@@ -1,0 +1,26 @@
+.logo {
+  font-family: $logoFontFamily, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $accentColor;
+
+ 
+}
+
+.logo__dark {
+    color: $colorBlack;
+  }
+
+.logo__light {
+    color: $colorWhite;
+  }
+
+.logo__header {
+  margin-right: 93px;
+}
+
+.logo__footer {
+  display: block;
+  margin-bottom: 20px;
+}
