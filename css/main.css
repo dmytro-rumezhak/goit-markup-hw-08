@@ -335,6 +335,8 @@ body {
 
 .mobile-menu.is-open {
   opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
   -webkit-transform: translate(100%, 0);
           transform: translate(100%, 0);
 }
@@ -1181,8 +1183,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1199,6 +1199,25 @@ body {
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(0.9);
           transform: translate(-50%, -50%) scale(0.9);
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__close {

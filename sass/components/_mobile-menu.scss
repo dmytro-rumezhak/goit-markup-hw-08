@@ -25,6 +25,8 @@
 
   &.is-open {
     opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
     transform: translate(100%, 0);
   }
 
