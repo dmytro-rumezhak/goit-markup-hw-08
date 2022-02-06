@@ -1,13 +1,22 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(./../images/Img.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px;
-  max-width: 1600px;
   margin: 0 auto;
+
+  @include tel {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-size: cover;
+  }
+
+  @include desk {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-size: 1600px;
+    max-width: 1600px;
+  }
 
   & .container {
     text-align: center;
@@ -17,10 +26,18 @@
 .hero__title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $heroTitleColor;
+
+  @include tel {
+    font-size: 26px;
+    line-height: 42px;
+  }
+
+  @include desk {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }

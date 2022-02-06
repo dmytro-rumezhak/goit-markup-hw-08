@@ -1,6 +1,8 @@
-
 .activity {
-  display: flex;
+
+  @include desk {
+    display: flex;
+  }
 }
 
 .activity__item {

@@ -1,12 +1,43 @@
 .advantages {
-  display: flex;
+  display: block;
+
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .advantages__item {
-  width: 270px;
+  max-width: 450px;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include tab {
+    max-width: 354px;
+
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include desk {
+    display: block;
+    max-width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -31,7 +62,12 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
   color: $bodyTitleColor;
+
+  @include tab {
+    text-align: left;
+  }
 }
 
 .advantages__desc {

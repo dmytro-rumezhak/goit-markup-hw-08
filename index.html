@@ -23,6 +23,47 @@
           <a href="./index.html" class="logo logo__header"
             >Web<span class="logo__dark">Studio</span>
           </a>
+          <button type="button" class="menu-button is-open" data-menu-open>
+            <svg class="menu-button__icon" aria-label="Переключатель мобильного меню">
+              <use href="./images/icons.svg#menu-burger"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu is-open" data-menu>
+            <button type="button" class="mobile-menu__button" data-menu-close>
+              <svg class="mobile-menu__icon">
+                <use href="./images/icons.svg#menu-close"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item"><a href="./" class="mobile-menu__link">Студия</a></li>
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+              </li>
+              <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+              <a href="tel:+380961111111" class="mobile-menu-footer__tel">+38 096 111 11 11</a>
+              <a href="mailto:info@devstudio.com" class="mobile-menu-footer__mail"
+                >info@devstudio.com</a
+              >
+              <ul class="mobile-menu-footer__list">
+                <li class="mobile-menu-footer__item">
+                  <a href="" class="mobile-menu-footer__link mobile-menu-footer__link--nopadding"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mobile-menu-footer__item">
+                  <a href="" class="mobile-menu-footer__link">Twitter</a>
+                </li>
+                <li class="mobile-menu-footer__item">
+                  <a href="" class="mobile-menu-footer__link">Facebook</a>
+                </li>
+                <li class="mobile-menu-footer__item">
+                  <a href="" class="mobile-menu-footer__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <nav class="nav">
             <ul class="nav-list">
               <li class="nav-list__item">
@@ -38,7 +79,7 @@
         <ul class="contact">
           <li class="contact__item">
             <a href="mailto:info@devstudio.com" class="contact__link">
-              <svg class="contact__icon" width="16" height="12">
+              <svg class="contact__icon contact__icon--mail">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com
@@ -46,7 +87,7 @@
           </li>
           <li class="contact__item">
             <a href="tel:+380961111111" class="contact__link">
-              <svg class="contact__icon" width="12" height="16">
+              <svg class="contact__icon contact__icon--phone">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11
@@ -123,7 +164,7 @@
       </section>
 
       <!-- Чем мы занимаемся -->
-      <section class="section section--nopaddingtop">
+      <section class="section section--nopaddingtop section--hidden">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="activity">
@@ -169,6 +210,7 @@
                 alt="Игорь Демьяненко продукт дизайнер"
                 width="270"
                 height="260"
+                class="team__img"
               />
               <div class="team__div-desc">
                 <h3 class="team__title">Игорь Демьяненко</h3>
@@ -231,6 +273,7 @@
                 alt="Ольга Репина фронтент разработчик"
                 width="270"
                 height="260"
+                class="team__img"
               />
               <div class="team__div-desc">
                 <h3 class="team__title">Ольга Репина</h3>
@@ -293,6 +336,7 @@
                 alt="Николай Тарасов маркетинг"
                 width="270"
                 height="260"
+                class="team__img"
               />
               <div class="team__div-desc">
                 <h3 class="team__title">Николай Тарасов</h3>
@@ -352,10 +396,10 @@
             <li class="team__item">
               <img
                 src="./images/nikilaj.jpg"
-                class="team-member-img"
                 alt="Михаил Ермаков дизайнер"
                 width="270"
                 height="260"
+                class="team__img"
               />
               <div class="team__div-desc">
                 <h3 class="team__title">Михаил Ермаков</h3>
@@ -621,5 +665,6 @@
 
     <!-- Підключення js на сайт -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

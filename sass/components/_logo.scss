@@ -1,23 +1,33 @@
 .logo {
   font-family: $logoFontFamily, sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   color: $accentColor;
 
- 
+  @include desk {
+    font-size: 26px;
+  }
 }
 
 .logo__dark {
-    color: $colorBlack;
-  }
+  color: $colorBlack;
+}
 
 .logo__light {
-    color: $colorWhite;
-  }
+  color: $colorWhite;
+}
 
 .logo__header {
-  margin-right: 93px;
+  margin-right: 0;
+
+  @include tab {
+    margin-right: 88px;
+  }
+
+  @include desk {
+    margin-right: 93px;
+  }
 }
 
 .logo__footer {

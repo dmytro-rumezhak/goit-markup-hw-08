@@ -3,16 +3,54 @@
 }
 
 .main-menu {
-  display: inline-flex;
+  height: 60px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @include tab {
+    height: 80px;
+  }
+}
+
+.menu-button {
+  width: 40px;
+  height: 32px;
+  padding: 8px;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  @include tab {
+    display: none;
+  }
+}
+
+.menu-button__icon {
+  width: 100%;
+  height: 100%;
+  fill: $bodyTitleColor;
+
+  .menu-button:hover &,
+  .menu-button:focus {
+    fill: $accentColor;
+  }
+}
+
+.nav {
+  display: none;
+
+  @include tab {
+    display: block;
+    margin-right: 84px;
+  }
 }
 
 .nav-list {
   display: inline-flex;
 }
 
-.nav-list__item:not(:last-child),
-.contact__item:not(:last-child) {
+.nav-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -27,7 +65,7 @@
 
   &:hover,
   &:focus {
-      color: $accentColor;
+    color: $accentColor;
   }
 
   &--active {
@@ -48,18 +86,48 @@
 }
 
 .contact {
-  display: inline-flex;
+  display: none;
+
+  @include tab {
+    display: block;
+  }
+
+  @include desk {
+    display: flex;
+  }
+}
+
+.contact__item {
+  @include tab {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include desk {
+    &:not(:last-child) {
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .contact__link {
-  display: flex;
-  align-items: center;
-  color: $bodyTextColor;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding: 32px 0;
-  transition: color 250ms $timingFunction;
+  @include tab {
+    display: flex;
+    align-items: center;
+    color: $bodyTextColor;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms $timingFunction;
+  }
+
+  @include desk {
+    font-size: 14px;
+    padding: 32px 0;
+  }
 
   &:hover .contact__icon,
   &:focus .contact__icon {
@@ -77,4 +145,14 @@
   fill: currentColor;
 
   transition: fill 250ms $timingFunction;
+}
+
+.contact__icon--mail {
+  width: 16px;
+  height: 12px;
+}
+
+.contact__icon--phone {
+  width: 12px;
+  height: 16px;
 }
