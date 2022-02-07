@@ -1,15 +1,14 @@
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 48px 40px;
   z-index: 100;
-  opacity: 1;
   transform: translate(0, 0);
 
-  transition: transform 250ms $timingFunction, opacity 250ms $timingFunction;
+  transition: transform 250ms $timingFunction, visibility 250ms $timingFunction;
 
   display: flex;
   flex-direction: column;
@@ -24,7 +23,6 @@
   }
 
   &.is-open {
-    opacity: 0;
     pointer-events: none;
     visibility: hidden;
     transform: translate(100%, 0);

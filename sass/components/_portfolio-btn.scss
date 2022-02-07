@@ -1,14 +1,27 @@
 .works-nav {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+
+  @include tab {
+    justify-content: center;
+  }
 }
 
 .works-nav__portfolio {
-  margin-bottom: 50px;
+  margin-top: -15px;
+  margin-bottom: 40px;
+
+  @include desk {
+    margin-bottom: 50px;
+  }
 }
 
-.works-nav__item:not(:last-child) {
-  margin-right: 8px;
+.works-nav__item {
+  margin-top: 15px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 .btn__works {
   padding: 6px 22px;

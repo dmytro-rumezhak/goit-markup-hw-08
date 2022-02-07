@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Портфолио</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -22,6 +23,53 @@
           <a href="./index.html" class="logo logo__header"
             >Web<span class="logo__dark">Studio</span>
           </a>
+          <button
+            type="button"
+            class="menu-button is-open"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-menu-open
+          >
+            <svg class="menu-button__icon" aria-label="Переключатель мобильного меню">
+              <use href="./images/icons.svg#menu-burger"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu is-open" id="mobile-menu" data-menu>
+            <button type="button" class="mobile-menu__button" data-menu-close>
+              <svg class="mobile-menu__icon">
+                <use href="./images/icons.svg#menu-close"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item"><a href="./" class="mobile-menu__link">Студия</a></li>
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+              </li>
+              <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+              <a href="tel:+380961111111" class="mobile-menu-footer__tel">+38 096 111 11 11</a>
+              <a href="mailto:info@devstudio.com" class="mobile-menu-footer__mail"
+                >info@devstudio.com</a
+              >
+              <ul class="mobile-menu-footer__list">
+                <li class="mobile-menu-footer__item">
+                  <a href="" class="mobile-menu-footer__link mobile-menu-footer__link--nopadding"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mobile-menu-footer__item">
+                  <a href="" class="mobile-menu-footer__link">Twitter</a>
+                </li>
+                <li class="mobile-menu-footer__item">
+                  <a href="" class="mobile-menu-footer__link">Facebook</a>
+                </li>
+                <li class="mobile-menu-footer__item">
+                  <a href="" class="mobile-menu-footer__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <nav class="nav">
             <ul class="nav-list">
               <li class="nav-list__item">
@@ -63,7 +111,7 @@
       <section class="section">
         <div class="container">
           <h1 class="visually-hidden">Примеры работ (нужно скрыть)</h1>
-          <ul class="works-nav works-nav__portfolio">
+          <ul class="works-nav works-nav__portfolio works-nav__portfolio--mb">
             <li class="works-nav__item">
               <button type="button" class="btn btn__works">Все</button>
             </li>
@@ -81,7 +129,7 @@
             </li>
           </ul>
 
-          <ul class="works layout layout__works">
+          <ul class="works">
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__img">
@@ -377,5 +425,6 @@
 
     <!-- Підключення js -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
