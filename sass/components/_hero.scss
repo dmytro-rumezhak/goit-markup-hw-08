@@ -1,46 +1,41 @@
 .hero {
+  max-width: 1600px;
+  height: 400px;
+
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/hero/Header-mob@1-min.jpg');
+    url(../images/hero/header-mob@1-min.jpg);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/header-mob@2-min.jpg);
+  }
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   margin: 0 auto;
 
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('../images/hero/Header-mob@2-min.jpg');
-  }
-
-  @include tel {
-    padding-top: 118px;
-    padding-bottom: 118px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
   @include tab {
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('../images/hero/Header-tab@1-min.jpg');
+      url(../images/hero/header-tab@1-min.jpg);
 
-    background-size: cover;
-    background-repeat: no-repeat;
-    
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero/Header-tab@2-min.jpg);
+        url(../images/hero/header-tab@2-min.jpg);
     }
   }
 
-  @include desk {
+  @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-size: 1600px;
-    max-width: 1600px;
+    height: 600px;
+
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero/Header-desc@1-min.jpg);
+      url(../images/hero/header-desc@1-min.jpg);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero/Header-desc@2-min.jpg);
+        url(../images/hero/header-desc@2-min.jpg);
     }
   }
 
