@@ -2,7 +2,6 @@
   @include tab {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
     margin-top: -30px;
     margin-left: -30px;
   }
@@ -24,12 +23,14 @@
   }
 
   @include desk {
-    flex-basis: calc((100% - 120px) / 3);
+    flex-basis: calc((100% - 90px) / 3);
   }
 }
 
 .works__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &:hover,
   &:focus {
@@ -70,6 +71,7 @@
 
 .works__desc {
   padding: 20px 24px;
+  flex-grow: 1;
   background: $colorWhite;
   border-width: 0 1px 1px 1px;
   border-style: solid;
@@ -77,6 +79,7 @@
 }
 
 .works__title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;

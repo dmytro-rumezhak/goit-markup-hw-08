@@ -13,8 +13,6 @@
 }
 
 .footer_address-box {
-  margin-bottom: 60px;
-
   @include desk {
     margin-bottom: 0;
     margin-right: 70px;
@@ -54,8 +52,6 @@
 }
 
 .footer__social-box {
-  margin-bottom: 60px;
-
   @include desk {
     margin-bottom: 0px;
     margin-right: 93px;
@@ -70,6 +66,9 @@
   color: $colorWhite;
 }
 
+.footer__form-box {
+  margin-top: 60px;
+}
 .footer__form {
   display: flex;
   flex-direction: column;

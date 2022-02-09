@@ -71,6 +71,10 @@
   &:focus {
     color: $accentColor;
   }
+
+  &--active {
+    color: $accentColor;
+  }
 }
 
 .mobile-menu-footer {
