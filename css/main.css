@@ -1044,6 +1044,16 @@ body {
   }
 }
 
+.footer__social-box {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__social-box {
+    margin-top: 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer__social-box {
     margin-bottom: 0px;
@@ -1061,6 +1071,12 @@ body {
 
 .footer__form-box {
   margin-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__form-box {
+    margin-top: 0;
+  }
 }
 
 .footer__form {

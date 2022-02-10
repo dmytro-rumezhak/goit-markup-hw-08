@@ -52,6 +52,11 @@
 }
 
 .footer__social-box {
+  margin-top: 60px;
+
+  @include tab {
+    margin-top: 0;
+  }
   @include desk {
     margin-bottom: 0px;
     margin-right: 93px;
@@ -68,6 +73,10 @@
 
 .footer__form-box {
   margin-top: 60px;
+
+  @include desk {
+    margin-top: 0;
+  }
 }
 .footer__form {
   display: flex;
